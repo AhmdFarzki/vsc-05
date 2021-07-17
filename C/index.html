@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+  <div class="card">
+    <div class="detail">
+        <img src="pic.png" alt="">
+    <div class="text">
+        <h1>Res Limit</h1>
+        <h5>Web Developer, 19</h5>
+    </div>
+    </div>
+   
+  </div>
+
+
+<script>
+  document.addEventListener('mousemove', function (event) {
+      const x = event.pageX
+      const y = event.pageY
+
+      const target = document.querySelector(".card")
+      const targetCoords = target.getBoundingClientRect()
+
+      const targetX = targetCoords.left + (target.offsetWidth / 2)
+      const targetY = targetCoords.top + (target.offsetHeight / 2)
+
+      const angelX = (targetY - y) / 25
+      const angelY = (targetX - x) / 25
+
+      target.style.transform = "rotateX(" + angelX +"deg) rotateY("+ angelY +"deg)"
+  })
+</script>
+
+  </body>
+</html>

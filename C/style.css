@@ -1,0 +1,27 @@
+
+body{
+    background-color: rgb(61, 61, 61);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective:  800px;
+  }
+
+  .card {
+      background-color: white;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 0 30px;
+  }
+
+  .detail{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .detail img {
+      padding-right: 50px;
+      width: 100px;
+  }

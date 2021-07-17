@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B</title>
+</head>
+<body>
+    <p>Masukan jumlah peserta: <input type="number" class="input-number" id="number" /></p>
+    <button type="submit" id="btn" onclick="pick()" >Acak Pemenang </button>
+    <h1 id="result"></h1>
+
+    <script>
+        function pick() {
+            var result = document.getElementById("result")
+            var min = 1
+            var max = document.getElementById("number").value
+            if (min && max) {
+                if (min > max) {
+                    let n3 = min
+                    let n4 = max
+                    max = n3
+                    min = n4
+                }
+                min = Math.ceil(min)
+                max = Math.ceil(max) + 1
+
+                resultFinal = Math.floor(Math.random() * (max - min)) + min
+                result.innerHTML = resultFinal
+            }
+        }
+
+    </script>
+</body>
+</html>
